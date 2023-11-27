@@ -1,0 +1,6 @@
+library(rvest)
+
+url <- "https://www.example.com"
+page <- read_html(url)
+title <- page %>% html_node("title") %>% html_text()
+print(title)
